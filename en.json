@@ -1,0 +1,42 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "JDECo Electricity Account",
+        "description": "Enter your JDECo phone number and password.",
+        "data": {
+          "username": "Phone Number (e.g. 05XXXXXXXX)",
+          "password": "Password",
+          "scan_interval": "Polling interval (minutes)"
+        }
+      },
+      "otp": {
+        "title": "One-Time Device Verification",
+        "description": "A one-time verification code was sent via SMS to {phone}. Enter the code below to register Home Assistant as an authorized device.",
+        "data": {
+          "otp": "SMS Verification Code"
+        }
+      }
+    },
+    "error": {
+      "invalid_auth": "Invalid phone number or password.",
+      "invalid_otp": "Invalid or expired SMS verification code.",
+      "cannot_connect": "Cannot reach JDECo server. Check your internet connection.",
+      "protocol_error": "Server communication error. Please try again.",
+      "unknown": "Unexpected error. Check the logs for details."
+    },
+    "abort": {
+      "already_configured": "This JDECo account is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "JDECo Options",
+        "data": {
+          "scan_interval": "Polling interval (minutes)"
+        }
+      }
+    }
+  }
+}
